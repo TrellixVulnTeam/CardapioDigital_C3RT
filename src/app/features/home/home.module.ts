@@ -6,6 +6,9 @@ import { HomeListComponent } from './home-list/home-list.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SharedModule } from '../../shared/shared.module';
 import { FoodServiceService } from './service/foodService.service';
+import { CartModule } from '../cart/cart.module';
+
+
 
 
 
@@ -18,7 +21,10 @@ import { FoodServiceService } from './service/foodService.service';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    CartModule
+
+
   ],
   exports:[
     HomepageComponent,

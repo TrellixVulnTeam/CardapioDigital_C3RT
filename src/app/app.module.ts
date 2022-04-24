@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './features/home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { FoodServiceService } from './features/home/service/foodService.service';
+import { CartModule } from './features/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FoodServiceService } from './features/home/service/foodService.service'
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    SharedModule
+    SharedModule,
+    CartModule
   ],
   providers: [
   ],

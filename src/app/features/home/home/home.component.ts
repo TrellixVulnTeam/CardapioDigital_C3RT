@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Food } from '../../model/food.model';;
+import { CartServiceService } from '../../cart/service/cart-service.service';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,15 @@ export class HomeComponent implements OnInit {
   @Input()
   food?:Food
 
-  constructor( ) { }
+  constructor( private cartService : CartServiceService) { }
 
   ngOnInit(): void {
   }
 
+  ADDCart(){
+    if (this.food) {
+      this.cartService.addFood(this.food);
+    };
+  }
 
 }
