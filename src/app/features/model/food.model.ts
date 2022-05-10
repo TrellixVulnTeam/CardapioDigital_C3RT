@@ -1,7 +1,7 @@
 export interface Food{
-  id?:number,
-  name?:string,
-  description?:string,
+  idSnack?:number,
+  nam?:string,
+  descri?:string,
   price?:number,
-  number?:number
+  num?:number
 }

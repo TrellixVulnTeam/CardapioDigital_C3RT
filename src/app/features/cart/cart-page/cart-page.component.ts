@@ -11,10 +11,19 @@ export class CartPageComponent implements OnInit {
 
   constructor(private cartService : CartServiceService) { }
 
-  ListFinal:Array<Food> = this.cartService.getAll();
+  listFinal:Array<Food> = this.cartService.getAll();
+  usertest:boolean = false;
+
 
   ngOnInit(): void {
+    let test = sessionStorage.getItem("user") ;
+     if (test) {
+       this.usertest = true;
+      }
 
+  }
+  finalRequest(){
+    this.cartService.createRequestFoodfinal();
   }
 
 }

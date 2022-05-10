@@ -5,19 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './features/home/home.module';
 import { SharedModule } from './shared/shared.module';
-import { FoodServiceService } from './features/home/service/foodService.service';
 import { CartModule } from './features/cart/cart.module';
+import { ClientModule } from './features/client/client.module';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     SharedModule,
-    CartModule
+    CartModule,
+    ClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],

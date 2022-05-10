@@ -1,18 +1,18 @@
 RESUMO DO PEDIDO
 
-<div *ngIf="ListFinal.length > 0 ">
-<div *ngFor="let item of ListFinal">
+<div *ngIf="listFinal.length > 0 ">
+<div *ngFor="let item of listFinal">
   ---------------------------------------------
-  <p>lanche:{{item?.name}}</p>
+  <p>lanche:{{item?.nam}}</p>
   <p>Preço uni: {{item?.price}}</p>
-  <p>Nº do lanche: {{item?.number}}</p>
+  <p>Nº do lanche: {{item?.num}}</p>
   ----------------------------------------------
- </div  >
- <button routerLink="">Finalizar pedido
-
- </button> <button routerLink="/home">Continuar comprando</button>
+ </div >
+ <button  *ngIf="usertest" (click)="finalRequest()" >Finalizar pedido</button>
+ <button routerLink="/clientform">dados de entrega</button>
+ <button routerLink="/home">Continuar comprando</button>
 </div>
 
-<div *ngIf="ListFinal.length == 0">
+<div *ngIf="listFinal.length == 0">
   NÂO HÀ PEDIDOS, FAÇA SEU PEDIDO
 </div>

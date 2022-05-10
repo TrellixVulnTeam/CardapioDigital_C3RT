@@ -1,0 +1,18 @@
+<div>
+  <h1>Faça seu cadastro</h1>
+<form [formGroup]="userForm" >
+  <label for="name">Nome</label>
+    <input type="text" id="fname" formControlName="name">
+
+  <label for="passWord">Telefone</label>
+    <input type="text" id="fname" formControlName="phone">
+
+  <label for="e-mail">Endereço</label>
+    <input type="text" id="fname" formControlName="address">
+
+  <label for="passWord">Pagamento</label>
+    <input type="text" id="fname" formControlName="payment">
+
+  <button (click)="onSubmit()">Finalizar</button>
+</form>
+</div>

@@ -11,10 +11,23 @@ import { FoodServiceService } from './../service/foodService.service';
 export class HomeListComponent implements OnInit {
 
 
-  constructor(private foodservice:FoodServiceService) { }
+  foods:Array<Food> = [];
+
+  constructor(
+    private foodservice:FoodServiceService
+    ) { }
 
   ngOnInit(): void {
+    this.getAll();
+
   }
-  foods:Array<Food> = this.foodservice.getAll();
+
+  getAll(){
+    this.foodservice.getAll().subscribe(data =>{
+      this.foods = data;
+    })
+  }
+
+
 
 }
