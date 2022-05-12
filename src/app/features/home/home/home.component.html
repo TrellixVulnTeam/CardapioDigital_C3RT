@@ -1,12 +1,8 @@
 
-<div class="card">
-  <mat-card >
+  <mat-card  class="card">
     <div class="img">
-      <mat-card-content >
         <img mat-card-md-image src="https://media.istockphoto.com/photos/hamburger-with-cheese-and-french-fries-picture-id1188412964?k=20&m=1188412964&s=612x612&w=0&h=Ow-uMeygg90_1sxoCz-vh60SQDssmjP06uGXcZ2MzPY=" alt="">
-      </mat-card-content>
     </div>
-    <div>
       <mat-card-content class="body">
         <mat-card-title>
           <p>Nome: {{food?.nam}}</p>
@@ -14,19 +10,14 @@
         <mat-card-subtitle>
           <p>Nº: {{food?.num}}</p>
         </mat-card-subtitle>
-
-          <p>Descrição</p>{{food?.descri}}
-          <br>
-             <p>Preço</p><p>{{food?.price}}</p>
+          <p> Descrição: {{food?.descri}} <br>
+          <span class="price"> Preço{{food?.price}}</span>
+          </p>
       </mat-card-content>
-    </div>
-      <br>
-        <div class="example-button-container">
-          <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)="ADDCart()">
-            <mat-icon>plus_one</mat-icon>
-          </button>
-        </div>
+      <div>
+        <button mat-button (click)="ADDCart()">ADICIONAR</button>
+      </div>
 
   </mat-card>
 
-</div>
+

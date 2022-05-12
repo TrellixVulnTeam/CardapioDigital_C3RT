@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { CartModule } from '../features/cart/cart.module';
 
 
 const materialModules = [
@@ -29,6 +30,7 @@ const materialModules = [
   imports: [
     CommonModule,
     HttpClientModule,
+    CartModule,
     ...materialModules
   ],
   exports:[
