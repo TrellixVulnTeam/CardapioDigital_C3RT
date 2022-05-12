@@ -45,17 +45,24 @@ export class CartServiceService {
   }
 
   createRequestFoodfinal(){
-    let ax:any = this.foods.forEach(element => {
+
+    for (let index = 0; index < this.foods.length; index++) {
+      let element = this.foods[index];
         this.request.namSnack = element.nam
         this.request.price = element.price
         this.request.price = element.price
-        this.request.address = this.user?.address
-        this.request.nameClient = this.user?.name
-        this.request.payment = this.user?.payment
-    });
-    this.requestfinal.push(ax)
-    console.log(ax);
-  }
+        this.request.address = this.user?.address;
+        this.request.nameClient = this.user?.name;
+        this.request.payment = this.user?.payment;
+        this.requestfinal.push(this.request);
+
+    };
+    /*for (let index = 0; index < this.requestfinal.length; index++) {
+        let element = this.requestfinal[index];*/
+        return this.httpClient.post<Request>(`${environment.baseUrlBackend}/request`,this.requestfinal, this.options);
+
+
+    }
 
   getAll(){
     return this.foods;

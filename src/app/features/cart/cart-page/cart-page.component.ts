@@ -23,7 +23,11 @@ export class CartPageComponent implements OnInit {
 
   }
   finalRequest(){
-    this.cartService.createRequestFoodfinal();
+    this.cartService.createRequestFoodfinal()?.subscribe(
+      data=>{
+        console.log(data);
+      }
+    )
   }
 
 }
